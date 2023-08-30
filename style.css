@@ -1,0 +1,827 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.wrapper{
+    width: 98.79vw;
+    overflow-x: hidden;    
+}
+.top{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #444444;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+}
+.top div{
+    padding-top: 10px;
+    border-left: 1px solid #444444;
+    font-size: 14px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: #444444;
+    font-family: "Gotham";
+}
+.main{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    gap: 20px;
+    height: 126px;
+    
+}
+.logo{
+    width: 274px;
+    height: 125px;
+    background-color: #ffffff;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+.searchBar{
+    width: 560px;
+    height: 54px;
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    position: relative;
+    margin: 38px 45px ;
+}
+#search{
+    font-size: 15px;
+    letter-spacing: 0px;
+    color: #444444;
+    font-family: "Gotham";
+    padding: 12px;
+
+    width: 560px;
+    height: 54px;
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    outline: none;
+
+}
+.mgGlass{
+    font-size: 20px;
+    letter-spacing: -1px;
+    color: #ffffff;
+    font-family: "Font Awesome";
+}
+.socialIcon{
+    display: flex;
+    gap: 10px;
+    margin: 46px 20px;
+    cursor: pointer;
+}
+    .socialbox:nth-child(1):hover{
+        background-color: #1877F2;
+        .ic{
+            color: white;
+        }
+    }
+    .socialbox:nth-child(2):hover{
+        background-color: #1DA1F2;
+        .ic{
+            color: white;
+        }
+    }
+    .socialbox:nth-child(3):hover{
+        background-color: #E4405F;
+        .ic{
+            color: white;
+        }
+    }
+    .socialbox:nth-child(4):hover{
+        background-color: #CD201F;
+        .ic{
+            color: white;
+        }
+    }
+
+.socialbox{
+    opacity: 0.802;
+    width: 41px;
+    height: 41px;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.10196078431372549);
+    border: 1px solid #616161;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ic{
+    font-size: 20px;
+color: #434343;
+font-family: "Font Awesome";
+text-align: center;
+}
+.searchButton{
+    width: 71px;
+    height: 55px;
+    background-color: #db3838;
+    position: relative;
+    top: -55px;
+    right: -550px;
+    border: none;
+    cursor: pointer;
+}
+.searchButton:hover{
+    background-color: #e91b1b;
+}
+
+#category{
+    height: 50px;
+    right: 30px;
+    position: absolute;
+    top: 1px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    letter-spacing: 0px;
+    font-family: "Gotham";
+}
+#category select{
+    color: #444444;
+}
+.spann{
+    position: absolute;
+    font-size: 15px;
+    letter-spacing: 0px;
+    color: #444444;
+    font-family: "Gotham";
+    font-size: 32px;
+    top: 5px;
+    right: 180px;
+    
+}
+.nav{
+    font-size: 15px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    background-color: black;
+    font-weight: 500;
+    font-family: "Gotham";
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.nav li{
+    list-style:none;
+    /* margin: 20px 30px; */
+    padding: 20px 30px;
+    position: relative;
+    cursor: pointer;
+}
+.nav li:nth-child(8){
+    background-color: #db3838;
+    border: 2px solid #db3838;
+    transition: all 200ms;
+    margin-left: 10px;
+}
+.nav li:nth-child(8):hover{
+    background-color: #e91b1b;
+}
+.nav li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.bottom{
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+    height: 5px;
+    margin-top: 16px;
+    background-color: #db3838;
+    opacity: 0;
+    transition: all 300ms;
+}
+.nav li:hover{
+    .bottom{
+        opacity: 1;
+    }
+}
+.hero{
+    width: 100vw;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("assets/Main\ Banner\ Area.png");
+    padding-top: 80px;
+    position: relative;
+}
+.left{
+    position: absolute;
+    opacity: 0.749;
+    width: 60px;
+    height: 60px;
+    border-radius: 33px;
+    cursor: pointer;
+    border:3px solid #ffffff;
+    top: 40%;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right{
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.749;
+    width: 60px;
+    height: 60px;
+    border-radius: 33px;
+    border:3px solid #ffffff;
+    right: 40px;
+    top: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.t1{
+    font-size: 25px;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Gotham";
+    text-align: center;
+}
+.t2{
+    font-size: 86px;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Gotham";
+    text-align: center;
+}
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line1{
+    width: 150px;
+    height: 2px;
+    background-color: #ffffff;
+}
+.t3{
+    font-size: 34px;
+    line-height: 60px;
+    color: #ffffff;
+    font-weight: 400;
+    font-style: italic;
+    font-family: "Open Sans";
+    text-align: center;
+}
+.line2{
+    width: 150px;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.t4{
+    font-size: 43px;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Gotham";
+    text-align: center;
+}
+.arrow{
+    color: #ffffff;
+    scale: 1.5;
+}
+
+
+.browse{
+    width: 80%; 
+    font-size: 16px;
+    display: flex;
+    margin: 40px auto; 
+}
+
+.browse ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style:":     ";
+}
+.browse ul li{
+
+    font-size: 16px;
+    color: #444444;
+    font-weight: 550;
+    font-family: "Gotham";
+}
+.b1{
+    list-style: none;
+}
+.b2{
+    list-style: url("/assets/.png");
+}
+
+
+.women{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin: 50px auto;
+    position: relative;
+}
+.r1{
+    position: absolute;
+    top: 10px;
+    left: -135px;
+    height: 94%;
+    width: 112px;
+}
+.w{
+    font-size: 28px;
+    line-height: 58px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Gotham";
+    text-align: center;
+    margin-top: 25%;
+    margin-bottom: 8%;
+}
+.w1{
+    width: 100%;
+    height: 300px;
+    background-image: url("assets/Banner1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.w2{
+    width: 100%;
+    height: 300px;
+    background-image: url("assets/Banner2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.w3{
+    width: 100%;
+    height: 300px;
+    background-image: url("assets/Banner\ 3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Wbtn{
+    width: 135px;
+    height: 37px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    font-family:"Gotham";
+    background-color: #db3838;
+    margin-left: 30% ;
+    cursor: pointer;
+    transition: all 300ms;
+    border: 2px solid #db3838;
+}
+.Wbtn:hover{
+    scale: 1.05;
+    background-color: #ffffff;
+    color: #db3838;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.623);
+}
+
+.men{
+    width: 80%;
+    margin: 80px auto;
+    position: relative;
+}
+.MenRec{
+    position: absolute;
+    right: -135px;
+    bottom: -10px;
+    height: 105%;
+    width: 100px;
+}
+.menHead{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.m1{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #444444;
+    font-weight: 500;
+    font-family: "Gotham"; 
+}
+.m2{
+    margin:20px 0;
+    width: 340px;
+    height: 3px;
+    background-color: #808080;
+}
+.mArrow{
+    opacity: 0.759;
+}
+
+.mArrowBox{
+    opacity: 0.749;
+    width: 39px;
+    height: 39px;
+    border-radius: 20px;
+    border: 2px solid #444444;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.M_R{
+    display: flex;
+    gap: 10px;
+}
+
+.MenBanner{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    justify-content: space-between;
+    gap: 30px;
+}
+.leftBanner{
+    width: 516px;
+    height: 400px;
+    background-image: url("assets/Section\ banner.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.leftBanner h1{
+    font-size: 45px;
+    line-height: 93px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 520;
+    font-family: "Gotham";
+    text-align: center;
+    margin-top: 22%;
+}
+.leftBanner button{
+    margin-left: 30%;
+    border:  none;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Gotham";
+    width: 200px;
+    height: 55px;
+    background-color: #db3838;
+    cursor: pointer;
+    transition: all 300ms;
+    border: 2px solid #db3838;
+}
+.leftBanner button:hover{
+    scale: 1.05;
+    background-color: #ffffff;
+    color: #db3838;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.623);
+}
+.right1 img{
+    margin-top: 12px;
+    height: 280px;
+    width: 255px;
+}
+.right2 img{
+    margin-top: 12px;
+    height: 280px;
+    width: 255px;
+}
+
+.mentextheading{
+    margin: 7px 0;
+    font-size: 15px;
+    color: #444444;
+    font-weight: 500;
+    font-family: "Gotham";
+}
+.MenBanner hr{
+    width: 273px;
+    height: 2px;
+    background-color: #e6e6e6;
+    margin-bottom: 8px;
+}
+.Mprice{
+    font-size: 20px;
+    color: #444444;
+    font-weight: 500;
+    font-family: "Gotham";
+}
+.revContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.review{
+    margin-top: 8px;
+}
+.ReviewBtn button{
+    border:  none;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Gotham";
+    margin-right: 20px;
+    width: 115px;
+    height: 30px;
+    background-color: #db3838;
+    cursor: pointer;
+    transition: all 300ms;
+    border: 2px solid #db3838;
+}
+
+.ReviewBtn button:hover{
+    scale: 1.05;
+    background-color: #ffffff;
+    color: #db3838;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.623);
+}
+.women2{
+    width: 80%;
+    margin: 80px auto;
+    position: relative;
+}
+
+.womenBanner{
+    flex-direction: row-reverse;
+}
+.womenLeftBanner{
+    padding-top: 20px;
+    background-image: url("assets/Rectangle\ 15\ copy\ 8.png");
+}
+
+.WomenRec{
+    position: absolute;
+    left: -200px;
+    bottom: -5px;
+    height: 102%;
+}
+
+.shop{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+.shop .ShopRec{
+    position: absolute;
+    right: -135px;
+    bottom: -10px;
+    height: 105%;
+    width: 100px;
+}
+.shopHead{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.s1{
+    color: #9d9b9b;
+}
+.rectangle{
+    width: 280px;
+    height: 3px;
+    background-color: #808080;
+    margin: 16px 0;
+}
+.sbtn button{
+    border:  none;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Gotham";
+    width: 110px;
+    
+    height: 30px;
+    background-color: #db3838;
+    cursor: pointer;
+    transition: all 300ms;
+    border: 2px solid #db3838;
+}
+.sbtn button:hover{
+    scale: 1.05;
+    background-color: #ffffff;
+    color: #db3838;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.623);
+}
+.ShopItems{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.Shopleft{
+    display: flex;
+    gap: 20px;
+}
+.sp{
+    margin-top: 10px;
+}
+
+.blog{
+    width: 80%;
+    margin: 100px auto;
+    position: relative;
+}
+.ReactangleBlog{
+    position: absolute;
+    width: 109px;
+    height: 500px;
+    top: -44px;
+    left: -137px;
+}
+.bR{
+    width: 350px;
+    height: 3px;
+    background-color: #808080;
+    margin: 20px 0;
+}
+.mainblog{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.b img{
+    width: 350px;
+}
+.mainblog h3{
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #444444;
+    font-weight: 600;
+    font-family: "Gotham";
+    margin: 16px 0;
+}
+.mainblog p{
+    width: 325px;
+    height: 67px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #444444;
+    font-family: "Gotham";
+    opacity: 0.879;
+}
+.b{
+    position: relative;
+}
+.b span{
+    font-size: 15px;
+    position: absolute;
+    font-weight: 600;
+    top: 35px;
+    left: 17px;
+}
+.b div{
+    position: absolute;
+    height: 64px;
+    width: 64px;
+    top: 153px;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Gotham";
+    text-align: center;
+}
+.lineUp{
+    position: absolute;
+    width: 124%;
+    top: -45px;
+    left: -137px;
+}
+.lineDown{
+    position: absolute;
+    width: 124%;
+    top: 456px;
+    left: -137px;
+}
+
+footer{
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.leftFooter div{
+    margin-left: 28px;
+    width: 250px;
+    height: 211px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #444444;
+    font-family: "Gotham";
+}
+
+.rightFooter h2{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #444444;
+    font-weight: bold;
+    font-family: "Gotham";
+}
+.rightFooter #email{
+    width: 330px;
+    height: 54px;
+    padding: 18px;
+    background-color: #e8e8e8;
+    outline:none;
+    border: none;
+}
+.rightFooter #submit{
+    width: 100px;
+    height: 54px;
+    background-color: #db3838;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Gotham";
+    border: none;
+    margin-left: -5px;
+}
+#submit:hover{
+    background-color: #e91b1b;
+}
+.rightFooter{
+    display: flex;
+    flex-direction: column;
+    margin: 34px 0;
+}
+.rf1{
+    display: flex;
+}
+.rf1 h2{
+    margin: 16px 0;
+    margin-right: 70px;
+    
+}
+.rf2{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.rf2 ul li{
+    list-style: none;
+    margin: 20px 0;
+    font-size: 15px;
+    color: #444444;
+    font-weight: 500;
+    font-family: "Gotham";
+    
+}
+.rf2 h3{
+    margin-top: 80px;
+    margin-bottom: 30px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #444444;
+    font-weight: 600;
+    font-family: "Gotham";
+}
+.rightFooter{
+    position: relative;
+}
+.footline1{
+    position: absolute;
+    width: 100%;
+    top: 105px;
+}
+.footline2{
+    position: absolute;
+    width: 100%;
+    bottom: -10px;
+}
+
+.copyright{
+    font-size: 18px;
+    color: #444444;
+    font-family: "Gotham";
+    font-weight: 900;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 80%;
+    text-align: center;
+
+}
+
+li{
+    cursor: pointer;
+}
