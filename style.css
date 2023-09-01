@@ -668,6 +668,7 @@ text-align: center;
 .mainblog>div{
     transition: all 1s;
     cursor: pointer;
+    padding: 5px;
 }
 .blog1:hover{
     scale:1.051;
