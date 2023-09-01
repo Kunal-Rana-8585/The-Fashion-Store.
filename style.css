@@ -367,7 +367,7 @@ text-align: center;
 .w2{
     width: 100%;
     height: 300px;
-    background-image: url("assets/banner2.png");
+    background-image: url("assets/Banner2.png");
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -657,10 +657,32 @@ text-align: center;
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    
 }
 .b img{
     width: 350px;
 }
+
+
+/**/
+.mainblog>div{
+    transition: all 1s;
+    cursor: pointer;
+}
+.blog1:hover{
+    scale:1.051;
+    box-shadow: 3px -3px 8px black;
+}
+.blog2:hover{
+    scale:1.051;
+    box-shadow: 3px -3px 8px black;
+}
+.blog3:hover{
+    scale:1.051;
+    box-shadow: 3px -3px 8px black;
+}
+
+/**/
 .mainblog h3{
     font-size: 15px;
     text-transform: uppercase;
