@@ -78,26 +78,69 @@
     margin: 46px 20px;
     cursor: pointer;
 }
+.socialbox:nth-child(1){
+    animation-name: social;
+    animation-duration: 2s;
+    animation-delay: 0.0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    background-color: #1877F2;
+}
+.socialbox:nth-child(2){
+    animation-name: social;
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    background-color: #1DA1F2;
+}
+.socialbox:nth-child(3){
+    animation-name: social;
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    background-color: #E4405F;
+}
+.socialbox:nth-child(4){
+    animation-name: social;
+    animation-duration: 2s;
+    animation-delay: 0.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+    animation-direction: alternate;
+    background-color: #CD201F;
+}
+
+
+
     .socialbox:nth-child(1):hover{
         background-color: #1877F2;
+        animation-iteration-count: 1;
         .ic{
             color: white;
         }
     }
     .socialbox:nth-child(2):hover{
         background-color: #1DA1F2;
+        animation-iteration-count: 1;
         .ic{
             color: white;
         }
     }
     .socialbox:nth-child(3):hover{
         background-color: #E4405F;
+        animation-iteration-count: 1;
         .ic{
             color: white;
         }
     }
     .socialbox:nth-child(4):hover{
         background-color: #CD201F;
+        animation-iteration-count: 1;
         .ic{
             color: white;
         }
@@ -847,4 +890,15 @@ footer{
 
 li{
     cursor: pointer;
+}
+
+@keyframes social {
+    30%{
+        transform: translateY(-20px) translateX(10px);
+        border:3px solid black;
+    }
+    70%{
+        transform: translateY(20px) translateX(20px);
+        border:3px solid black;
+    }
 }
