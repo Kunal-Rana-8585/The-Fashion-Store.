@@ -7,12 +7,12 @@
     scroll-behavior: smooth;
 }
 .wrapper{
-    width: 100%;
+    width: 98.79vw;
     overflow-x: hidden;    
 }
 .top{
     width: 100%;
-    min-height: 40px;
+    height: 40px;
     border: 1px solid #444444;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -27,21 +27,6 @@
     color: #444444;
     font-family: "Gotham";
 }
-/***********************************************/
-/*top part*/ 
-@media screen and (max-width: 767px) {
-    .top {
-        grid-template-columns: 1fr; 
-    } 
-    .top div{
-        border-left: 0;
-        border-top: 1px solid #444444;
-        padding: 10px 0; 
-} 
-}
-/***********************************************/
-
-
 .main{
     display: flex;
     width: 90%;
@@ -49,11 +34,6 @@
     gap: 20px;
     height: 126px;
     
-}
-.maincontainer{
-    display: flex;
-    gap: 50px;
-    justify-content: space-between;
 }
 .logo{
     width: 274px;
@@ -99,21 +79,73 @@
     cursor: pointer;
 }
 .socialbox:nth-child(1){
+    animation-name: social;
+    animation-duration: 2s;
     animation-delay: 0.0s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
     background-color: #1877F2;
 }
 .socialbox:nth-child(2){
+    animation-name: social;
+    animation-duration: 2s;
     animation-delay: 0.2s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
     background-color: #1DA1F2;
 }
 .socialbox:nth-child(3){
+    animation-name: social;
+    animation-duration: 2s;
     animation-delay: 0.4s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
     background-color: #E4405F;
 }
-.socialbox:nth-child(4){  
+.socialbox:nth-child(4){
+    animation-name: social;
+    animation-duration: 2s;
     animation-delay: 0.6s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in-out; 
+    animation-direction: alternate;
     background-color: #CD201F;
 }
+
+
+
+    .socialbox:nth-child(1):hover{
+        background-color: #1877F2;
+        animation-iteration-count: 1;
+        .ic{
+            color: white;
+        }
+    }
+    .socialbox:nth-child(2):hover{
+        background-color: #1DA1F2;
+        animation-iteration-count: 1;
+        .ic{
+            color: white;
+        }
+    }
+    .socialbox:nth-child(3):hover{
+        background-color: #E4405F;
+        animation-iteration-count: 1;
+        .ic{
+            color: white;
+        }
+    }
+    .socialbox:nth-child(4):hover{
+        background-color: #CD201F;
+        animation-iteration-count: 1;
+        .ic{
+            color: white;
+        }
+    }
+
 .socialbox{
     opacity: 0.802;
     width: 41px;
@@ -124,26 +156,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
-
-    transition: all 500ms;
-
-    animation-name: social;
-    animation-duration: 2s;
-    animation-iteration-count: 3;
-    animation-timing-function: ease-in-out; 
-    animation-direction: alternate;
-
 }
-.socialbox>a{
-    width: 41px;
-    height: 41px;
-    padding: 25% 25%;
-}
-.socialbox:hover{
-        scale: 1.1;
-        box-shadow: 3px 3px 10px black;
-    }
 .ic{
     font-size: 20px;
 color: #434343;
@@ -189,40 +202,6 @@ text-align: center;
     right: 180px;
     
 }
-/*******************************************************/
-/* Your existing styles for non-responsive layout */
-
-/* Media Query for Tablets */
-@media screen and (max-width: 768px) {
-    .logo{
-        width: 40%;
-        float: left;
-        margin-left: 5%;
-    }
-    .maincontainer {
-        margin-left: 10%;
-        width: 40%;
-        float: left;
-    }
-    .searchBar {
-        display: none;
-    }
-}
-
-/* Media Query for Mobile Devices */
-@media screen and (max-width: 480px) {
-    .maincontainer{
-        display: none;
-    }
-    .logo{
-        width: 100%;
-    }
-}
-
-/*******************************************************/
-
-
-
 .nav{
     font-size: 15px;
     letter-spacing: 0px;
@@ -272,7 +251,7 @@ text-align: center;
     }
 }
 .hero{
-    width: 100%;
+    width: 100vw;
     height: 500px;
     background-position: center;
     background-size: cover;
@@ -391,7 +370,7 @@ text-align: center;
     list-style: none;
 }
 .b2{
-    list-style: url("assets/arrow.png");
+    list-style: url("assets/*.png");
 }
 
 
@@ -481,12 +460,6 @@ text-align: center;
     display: flex;
     justify-content: space-between;
 }
-.M_L:hover,.M_L:active{
-    cursor: pointer;
-}
-.M_L h1:active{
-    color: #CD201F !important;
-}
 .m1{
     font-size: 25px;
     text-transform: uppercase;
@@ -515,14 +488,6 @@ text-align: center;
     align-items: center;
     cursor: pointer;
 }
-.mArrowBox:hover,mArrowBox:active{
-    border: 3px solid #CD201F;
-    .mArrow:hover,mArrow:active{
-        opacity: 1;
-        color: #CD201F;
-    }
-}
-
 .M_R{
     display: flex;
     gap: 10px;
@@ -531,7 +496,7 @@ text-align: center;
 .MenBanner{
     display: flex;
     width: 100%;
-    min-height: 400px;
+    height: 400px;
     justify-content: space-between;
     gap: 30px;
 }
@@ -574,22 +539,20 @@ text-align: center;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.623);
 }
 .right1 img{
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     margin-top: 12px;
     height: 280px;
     width: 255px;
 }
 .right2 img{
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     margin-top: 12px;
     height: 280px;
     width: 255px;
 }
 
 .mentextheading{
-    margin: 8px 0;
-    font-size: 16px;
-    color: #2f2e2e;
+    margin: 7px 0;
+    font-size: 15px;
+    color: #444444;
     font-weight: 500;
     font-family: "Gotham";
 }
@@ -601,7 +564,7 @@ text-align: center;
 }
 .Mprice{
     font-size: 20px;
-    color: #161515;
+    color: #444444;
     font-weight: 500;
     font-family: "Gotham";
 }
@@ -610,66 +573,8 @@ text-align: center;
     justify-content: space-between;
 }
 .review{
-    margin-top: 0px;
+    margin-top: 8px;
 }
-/*------------------Rating--------------------*/
-     .rating {
-            display: flex;
-            justify-content: center;
-        }
-        .star {
-            cursor: pointer;
-            font-size: 25px;
-            color: black;
-            position: relative;
-        }
-
-        .star:before {
-            content: '★';
-            position: absolute;
-            top: -1px;
-            left: 0px;
-            font-size: 25px;
-            color: transparent;
-            transition: color 0.1s, transform 0.2s;
-        }
-
-        .star:hover:before,
-        .star.checked:before {
-            color: #FDFF00;
-            transform: scale(1.1);
-        }
-
-        .star.checked:before {
-            color: #FFEF00;
-            animation: glitter 2s infinite;
-        }
-
-        .star:before {
-            clip-path: polygon(50% 0%, 61% 39%, 100% 45%, 69% 68%, 79% 100%, 50% 79%, 21% 100%, 31% 68%, 0% 45%, 39% 39%);
-            -webkit-clip-path: polygon(50% 0%, 61% 39%, 100% 45%, 69% 68%, 79% 100%, 50% 79%, 21% 100%, 31% 68%, 0% 45%, 39% 39%);
-        }
-
-        @keyframes glitter {
-            0% {
-                transform: scale(1);
-                opacity: 0.8;
-            }
-
-            50% {
-                transform: scale(1.1);
-                opacity: 1;
-            }
-
-            100% {
-                transform: scale(1);
-                opacity: 0.8;
-            }
-        }
-
-
-
-
 .ReviewBtn button{
     border:  none;
     font-size: 15px;
@@ -734,7 +639,7 @@ text-align: center;
     color: #9d9b9b;
 }
 .rectangle{
-    width: 260px;
+    width: 280px;
     height: 3px;
     background-color: #808080;
     margin: 16px 0;
@@ -801,50 +706,6 @@ text-align: center;
     width: 350px;
 }
 
-/*********************************/
-/* Base styles for non-responsive layout */
-
-/* Media Query for Tablets */
-@media screen and (max-width: 768px) {
-    .blog {
-        padding: 20px;
-    }
-    .bloghead {
-        text-align: center;
-    }
-    .mainblog {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .blog1, .blog2, .blog3 {
-        margin-bottom: 40px;
-    }
-    .ReactangleBlog{
-        display: none;
-    }
-    .lineDown{
-        display: none;
-    }
-    .bR{
-        margin: 30px auto;
-    }
-}
-
-/* Media Query for Mobile Devices */
-@media screen and (max-width: 480px) {
-    .blog {
-        padding: 10px;
-    }
-    .blog1, .blog2, .blog3 {
-        margin-bottom: 20px;
-    }
-}
-
-
-/*********************************/
-
-
 
 /**/
 .mainblog>div{
@@ -854,15 +715,15 @@ text-align: center;
 }
 .blog1:hover{
     scale:1.051;
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.405);
+    box-shadow: 3px -3px 8px black;
 }
 .blog2:hover{
     scale:1.051;
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.405);
+    box-shadow: 3px -3px 8px black;
 }
 .blog3:hover{
     scale:1.051;
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.405);
+    box-shadow: 3px -3px 8px black;
 }
 
 /**/
@@ -919,7 +780,7 @@ text-align: center;
 }
 
 footer{
-    width: 84%;
+    width: 80%;
     margin: 50px auto;
     display: flex;
     justify-content: space-between;
@@ -927,15 +788,14 @@ footer{
 }
 .leftFooter div{
     margin-left: 28px;
-    width: 264px;
-    font-size: 14px;
+    width: 250px;
+    height: 211px;
+    font-size: 15px;
     line-height: 24px;
     color: #444444;
     font-family: "Gotham";
 }
-.leftFooter div strong{
-    font-size: 17px;
-}
+
 .rightFooter h2{
     font-size: 20px;
     text-transform: uppercase;
@@ -944,7 +804,7 @@ footer{
     font-family: "Gotham";
 }
 .rightFooter #email{
-    min-width: 330px;
+    width: 330px;
     height: 54px;
     padding: 18px;
     background-color: #e8e8e8;
@@ -952,7 +812,7 @@ footer{
     border: none;
 }
 .rightFooter #submit{
-    min-width: 100px;
+    width: 100px;
     height: 54px;
     background-color: #db3838;
     font-size: 15px;
@@ -981,49 +841,16 @@ footer{
 .rf2{
     display: flex;
     justify-content: space-between;
+    
 }
 .rf2 ul li{
     list-style: none;
-    margin: 20px 0; 
-    font-size: 15px;
-    color: #444444;
-    font-weight: 500;
-    font-family: "Gotham";   
-}
-.rf2 ul li a{
-    color: #444444;
-    text-decoration: none;
-}
-.rf2 ul li a:hover{
-    color: #fd0404;
-}
-summary{
+    margin: 20px 0;
     font-size: 15px;
     color: #444444;
     font-weight: 500;
     font-family: "Gotham";
-}
-details p{
-    font-size: 13px;
-    color: rgba(96, 94, 94, 0.708);
-    margin: 8px 4px;
-    font-weight: 700;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 16px;
-}
-details p u{
-    font-size: 13px;
-    color: #444444;
-    text-shadow:none;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-details[open] summary {
-    color: #db3838;
-    font-weight: 700;
-    text-decoration: underline;
-  }
-.rf2 .rf2_1{
-    width: 230px;
+    
 }
 .rf2 h3{
     margin-top: 80px;
@@ -1076,316 +903,3 @@ li{
         transform: translateY(20px);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*shop*/
-@media screen and (max-width: 768px) {
-    .ShopItems {
-        flex-direction: column;
-        align-items: center;
-        background-color: #e5e2e2;
-    }
-    .shopHead{
-        flex-direction: column;
-    }
-    .Shopleft{
-        flex-direction: column;
-    }
-}
-
-
-/* *** */
-/* Base styles for non-responsive layout */
-
-/* Media Query for Tablets */
-@media screen and (max-width: 768px) {
-    .menHead {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .M_R {
-        margin-top: 20px;
-    }
-    .right1, .right2 {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto 40px;
-    }
-    .WomenRec{
-        display: none;
-    }
-    .womenBanner{
-        flex-direction: column;
-    }
-    .women{
-        width: 90%;
-        grid-template-columns: repeat(1fr);
-    }
-}
-
-/* Media Query for Mobile Devices */
-@media screen and (max-width: 480px) {
-    .right1, .right2 {
-        margin-bottom: 20px;
-    }
-    .Mprice {
-        font-size: 14px;
-    }
-}
-
-
-
-/*men*/
-/* Base styles for non-responsive layout */
-
-/* Media Query for Tablets */
-@media screen and (max-width: 768px) {
-    .men{
-        width: 90%;
-    }
-    .MenRec{
-        display: none;
-    }
-    .menHead {
-        flex-direction: column;
-        align-items: center;
-    }
-    .MenBanner{
-        margin: 30px 0;
-        flex-direction: column;
-        align-items: center;
-    }
-    .M_R {
-        margin-top: 20px;
-        text-align: center;
-    }
-    .right1, .right2 {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto 40px;
-    }
-    .leftBanner button, .ReviewBtn button {
-        font-size: 14px;
-    }
-}
-
-/* Media Query for Mobile Devices */
-@media screen and (max-width: 480px) {
-    .right1, .right2 {
-        margin-bottom: 20px;
-    }
-    .Mprice {
-        font-size: 14px;
-    }
-    .leftBanner button, .ReviewBtn button {
-        font-size: 12px;
-    }
-}
-
-
-/*women*/
-/* Base styles for non-responsive layout */
-
-/* Media Query for Tablets */
-@media screen and (max-width: 768px) {
-    .w1, .w2, .w3 {
-        text-align: center;
-    }
-    .r1{
-        display: none;
-    }
-    .women{
-        grid-template-columns: 1fr;
-        width: 90%;
-    }
-    .Wbtn{
-        margin: 0 auto;
-    }
-}
-
-/* Media Query for Mobile Devices */
-@media screen and (max-width: 480px) {
-    .w1, .w2, .w3 {
-        text-align: center;
-        margin-bottom: 15px;
-    }
-    .w {
-        font-size: 18px;
-    }
-    .Wbtn {
-        font-size: 14px;
-    }
-}
-
-
-
-/*browse*/
-
-/* Base styles for non-responsive layout */
-
-/* Media Query for Tablets */
-@media screen and (max-width: 768px) {
-    .browse ul {
-        display: none;
-    }
-}
-
-
-
-/*footer*/
-/* Base styles for non-responsive layout */
-
-/* Media Query for Tablets */
-@media screen and (max-width: 768px) {
-    #contact{
-        flex-direction: column;
-        align-items: center;
-    }
-    .leftFooter {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    .rf1 {
-        flex-direction: column;
-        align-items: center;
-            text-align: center;
-    }
-    #submit,#email{
-        margin: 20px auto;
-        width: 100%;
-        }
-    .rf2{
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-    }
-    
-}
-
-
-/* Base styles for non-responsive layout */
-.toggle-btn{
-    text-align: center;
-    width: 100%;
-    height: 50px;
-    background-color:#CD201F;
-    font-size: larger;
-    color: white; 
-    padding: 10px;
-    display: none;
-}
-/* Media Query for Tablets */
-@media screen and (max-width: 768px) {
-    .toggle-btn{
-        display: block;
-    }
-    .nav{
-        flex-direction: column;
-    }
-    .nav li {
-        display: block;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    .nav a {
-        padding: 10px;
-    }
-    .nav .bottom {
-        width: 100%;
-    }
-    .nav.responsive {
-        display: none;
-    }
-    .nav li {
-        margin-bottom: 8px;
-        text-align: left;
-    }
-    .nav a {
-        padding: 8px;
-    }
-    /* .nav.responsive {
-        display: flex;
-    } */
-}
-
-
-
-/* *hero Nav* */
-/* Base styles for non-responsive layout */
-
-/* Media Query for Tablets */
-@media screen and (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero .left, .hero .right {
-        display: none;
-    }
-    .arrow {
-        margin: 0;
-    }
-    .t1, .t2, .t3, .t4 {
-        margin: 10px 0;
-    }
-    .line1, .line2 {
-        display: none;
-    }
-}
-
-/* Media Query for Mobile Devices */
-@media screen and (max-width: 480px) {
-    .hero .t2 {
-        font-size: 42px;
-    }
-    .hero .t3 {
-        display: none;
-    }
-    .hero .t4 {
-        font-size: 30px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .browse{
-        display: none;
-    }
-    .top{
-        display: none;
-    }
-}
-
-Button:active {
-    border:5px solid #434343;
-    color: black !important;
-    scale: 1 !important;
-}
-
-
-
-
-.browse a{
-    text-decoration: none;
-}
-
-
-
-
-
-
