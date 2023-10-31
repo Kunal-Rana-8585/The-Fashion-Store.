@@ -124,6 +124,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 
     transition: all 500ms;
 
@@ -133,6 +134,11 @@
     animation-timing-function: ease-in-out; 
     animation-direction: alternate;
 
+}
+.socialbox>a{
+    width: 41px;
+    height: 41px;
+    padding: 25% 25%;
 }
 .socialbox:hover{
         scale: 1.1;
@@ -244,7 +250,7 @@ text-align: center;
 .nav li:nth-child(8):hover{
     background-color: #e91b1b;
 }
-.nav li .navitem{
+.nav li a{
     text-decoration: none;
     color: #ffffff;
 }
@@ -475,6 +481,12 @@ text-align: center;
     display: flex;
     justify-content: space-between;
 }
+.M_L:hover,.M_L:active{
+    cursor: pointer;
+}
+.M_L h1:active{
+    color: #CD201F !important;
+}
 .m1{
     font-size: 25px;
     text-transform: uppercase;
@@ -503,6 +515,14 @@ text-align: center;
     align-items: center;
     cursor: pointer;
 }
+.mArrowBox:hover,mArrowBox:active{
+    border: 3px solid #CD201F;
+    .mArrow:hover,mArrow:active{
+        opacity: 1;
+        color: #CD201F;
+    }
+}
+
 .M_R{
     display: flex;
     gap: 10px;
@@ -554,20 +574,22 @@ text-align: center;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.623);
 }
 .right1 img{
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     margin-top: 12px;
     height: 280px;
     width: 255px;
 }
 .right2 img{
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     margin-top: 12px;
     height: 280px;
     width: 255px;
 }
 
 .mentextheading{
-    margin: 7px 0;
-    font-size: 15px;
-    color: #444444;
+    margin: 8px 0;
+    font-size: 16px;
+    color: #2f2e2e;
     font-weight: 500;
     font-family: "Gotham";
 }
@@ -579,7 +601,7 @@ text-align: center;
 }
 .Mprice{
     font-size: 20px;
-    color: #444444;
+    color: #161515;
     font-weight: 500;
     font-family: "Gotham";
 }
@@ -588,8 +610,66 @@ text-align: center;
     justify-content: space-between;
 }
 .review{
-    margin-top: 8px;
+    margin-top: 0px;
 }
+/*------------------Rating--------------------*/
+     .rating {
+            display: flex;
+            justify-content: center;
+        }
+        .star {
+            cursor: pointer;
+            font-size: 25px;
+            color: black;
+            position: relative;
+        }
+
+        .star:before {
+            content: '★';
+            position: absolute;
+            top: -1px;
+            left: 0px;
+            font-size: 25px;
+            color: transparent;
+            transition: color 0.1s, transform 0.2s;
+        }
+
+        .star:hover:before,
+        .star.checked:before {
+            color: #FDFF00;
+            transform: scale(1.1);
+        }
+
+        .star.checked:before {
+            color: #FFEF00;
+            animation: glitter 2s infinite;
+        }
+
+        .star:before {
+            clip-path: polygon(50% 0%, 61% 39%, 100% 45%, 69% 68%, 79% 100%, 50% 79%, 21% 100%, 31% 68%, 0% 45%, 39% 39%);
+            -webkit-clip-path: polygon(50% 0%, 61% 39%, 100% 45%, 69% 68%, 79% 100%, 50% 79%, 21% 100%, 31% 68%, 0% 45%, 39% 39%);
+        }
+
+        @keyframes glitter {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+        }
+
+
+
+
 .ReviewBtn button{
     border:  none;
     font-size: 15px;
@@ -654,7 +734,7 @@ text-align: center;
     color: #9d9b9b;
 }
 .rectangle{
-    width: 280px;
+    width: 260px;
     height: 3px;
     background-color: #808080;
     margin: 16px 0;
@@ -774,15 +854,15 @@ text-align: center;
 }
 .blog1:hover{
     scale:1.051;
-    box-shadow: 3px -3px 8px black;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.405);
 }
 .blog2:hover{
     scale:1.051;
-    box-shadow: 3px -3px 8px black;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.405);
 }
 .blog3:hover{
     scale:1.051;
-    box-shadow: 3px -3px 8px black;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.405);
 }
 
 /**/
@@ -839,7 +919,7 @@ text-align: center;
 }
 
 footer{
-    width: 80%;
+    width: 84%;
     margin: 50px auto;
     display: flex;
     justify-content: space-between;
@@ -847,14 +927,15 @@ footer{
 }
 .leftFooter div{
     margin-left: 28px;
-    width: 250px;
-    height: 211px;
-    font-size: 15px;
+    width: 264px;
+    font-size: 14px;
     line-height: 24px;
     color: #444444;
     font-family: "Gotham";
 }
-
+.leftFooter div strong{
+    font-size: 17px;
+}
 .rightFooter h2{
     font-size: 20px;
     text-transform: uppercase;
@@ -900,16 +981,49 @@ footer{
 .rf2{
     display: flex;
     justify-content: space-between;
-    
 }
 .rf2 ul li{
     list-style: none;
-    margin: 20px 0;
+    margin: 20px 0; 
+    font-size: 15px;
+    color: #444444;
+    font-weight: 500;
+    font-family: "Gotham";   
+}
+.rf2 ul li a{
+    color: #444444;
+    text-decoration: none;
+}
+.rf2 ul li a:hover{
+    color: #fd0404;
+}
+summary{
     font-size: 15px;
     color: #444444;
     font-weight: 500;
     font-family: "Gotham";
-    
+}
+details p{
+    font-size: 13px;
+    color: rgba(96, 94, 94, 0.708);
+    margin: 8px 4px;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 16px;
+}
+details p u{
+    font-size: 13px;
+    color: #444444;
+    text-shadow:none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+details[open] summary {
+    color: #db3838;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+.rf2 .rf2_1{
+    width: 230px;
 }
 .rf2 h3{
     margin-top: 80px;
@@ -1170,9 +1284,9 @@ li{
     text-align: center;
     width: 100%;
     height: 50px;
-    background-color:#1DA1F2;
+    background-color:#CD201F;
     font-size: larger;
-    color: white;
+    color: white; 
     padding: 10px;
     display: none;
 }
@@ -1189,7 +1303,7 @@ li{
         text-align: center;
         margin-bottom: 10px;
     }
-     .navitem {
+    .nav a {
         padding: 10px;
     }
     .nav .bottom {
@@ -1202,7 +1316,7 @@ li{
         margin-bottom: 8px;
         text-align: left;
     }
-  .navitem {
+    .nav a {
         padding: 8px;
     }
     /* .nav.responsive {
@@ -1238,13 +1352,13 @@ li{
 /* Media Query for Mobile Devices */
 @media screen and (max-width: 480px) {
     .hero .t2 {
-        font-size: 24px;
+        font-size: 42px;
     }
     .hero .t3 {
         display: none;
     }
     .hero .t4 {
-        font-size: 18px;
+        font-size: 30px;
     }
 }
 
@@ -1252,6 +1366,26 @@ li{
     .browse{
         display: none;
     }
+    .top{
+        display: none;
+    }
 }
+
+Button:active {
+    border:5px solid #434343;
+    color: black !important;
+    scale: 1 !important;
+}
+
+
+
+
+.browse a{
+    text-decoration: none;
+}
+
+
+
+
 
 
